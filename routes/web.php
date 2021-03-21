@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CursoController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,17 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class);
 
-Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
+Route::get('courses', [CourseController::class, 'index'])->name('courses.index');
 
-Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.create');
+Route::get('courses/create', [CourseController::class, 'create'])->name('courses.create');
 
-Route::get('cursos/{id}', [CursoController::class, 'show'])->name('cursos.show');
+Route::post('courses', [CourseController::class, 'store'])->name('courses.store');
 
-// Route::get('cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
+Route::get('courses/{course}', [CourseController::class, 'show'])->name('courses.show');
 
-//     if ($categoria) {
-//         return "Curso: $curso de la categoría: $categoria";
-//     } else {
-//         return "Curso: $curso";
-//     }
-// });
+Route::get('courses/{course}/edit', [CourseController::class, 'edit'])->name('courses.edit');
+
+Route::put('courses/{course}', [CourseController::class, 'update'])->name('courses.update');

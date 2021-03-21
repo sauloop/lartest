@@ -6,11 +6,11 @@
 <br>
 <h1>Cursos</h1>
 <br>
-<a href="{{route('cursos.create')}}">Crear curso</a>
+<a href="{{route('courses.create')}}">Crear curso</a>
 <br><br>
 <ul>
     @foreach ($courses as $course)
-    <li><a href="{{route('cursos.show',$course->id)}}">{{$course->name}}</a></li>
+    <li><a href="{{route('courses.show',$course)}}">{{$course->name}}</a></li>
     @endforeach
 </ul>
 <br>
