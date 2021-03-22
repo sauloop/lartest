@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: lartest.herokuapp.com
+Token: bfd8000b6e879d230cc835edd925f9abff22d5acc68e637bcf068a91fa16d78c
